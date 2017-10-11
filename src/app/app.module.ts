@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { MenuModule, PanelModule} from 'primeng/primeng';
+import { MenuModule, PanelModule, ChartModule} from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import {RouterModule, Routes} from '@angular/router';
@@ -50,6 +50,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     MenuModule,
     PanelModule,
+    ChartModule
   ],
   providers: [  ],
   bootstrap: [AppComponent]

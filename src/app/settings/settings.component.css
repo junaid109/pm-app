@@ -1,0 +1,19 @@
+.icon {
+  font-size: 80px;
+  margin: 0px;
+  padding: 5px;
+  background: transparent
+}
+
+.data {
+  padding: 1em;
+  vertical-align: middle;
+}
+
+.value {
+  font-size: 40px;
+}
+
+.label {
+  text-transform: uppercase;
+}
