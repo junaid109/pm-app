@@ -62,7 +62,4 @@ export class AppComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.selectInitialMenuItemBasedOnUrl();
   }
-
-
-
 }

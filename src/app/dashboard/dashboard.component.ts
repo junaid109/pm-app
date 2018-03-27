@@ -64,7 +64,6 @@ export class DashboardComponent implements AfterViewInit {
     ]
   }
 
-
   hoursByTeamChartData = {
 
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
@@ -105,35 +104,35 @@ export class DashboardComponent implements AfterViewInit {
 
 
   hoursByHappynessChartData = {
-    
+
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
         datasets: [
           {
             label: 'Happy Team',
             type: 'line',
             borderColor: '#565656',
-            fill: false,         
+            fill: false,
             data: [15, 49, 20, 55, 97, 93]
           },
           {
             label: 'Sad Team',
             type: 'line',
-            borderColor: '#4bc0c0',            
-            fill: false,                
+            borderColor: '#4bc0c0',
+            fill: false,
             data: [14, 13, 37, 40, 77, 70]
           }
         ]
-    
+
       }
-    
+
 
   onDataSelect(event) {
 
-    let dataSetIndex = event.element._datasetIndex;
-    let dataItemIndex = event.element._index;
+    const dataSetIndex = event.element._datasetIndex;
+    const dataItemIndex = event.element._index;
 
-    let labelClicked = this.hoursByTeamChartDataMixed.datasets[dataSetIndex].label;
-    let valueClicked = this.hoursByTeamChartDataMixed.datasets[dataSetIndex].data[dataItemIndex];
+    const labelClicked = this.hoursByTeamChartDataMixed.datasets[dataSetIndex].label;
+    const valueClicked = this.hoursByTeamChartDataMixed.datasets[dataSetIndex].data[dataItemIndex];
 
     alert(`Looks like ${labelClicked} worked ${valueClicked} hours`);
   }
@@ -142,8 +141,8 @@ export class DashboardComponent implements AfterViewInit {
   ngAfterViewInit() {
     Observable.caller(3000).timeInterval().subscribe(() => {
 
-      var hoursByTeam = this.hoursByTeamChartDataMixed.datasets;
-      var randomised = hoursByTeam.map((dataset) => {
+      const hoursByTeam = this.hoursByTeamChartDataMixed.datasets;
+      const randomised = hoursByTeam.map((dataset) => {
 
         dataset.data = dataset.data.map((hours) => hours * (Math.random() * 2));
 

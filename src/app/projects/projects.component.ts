@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -6,10 +7,27 @@ import { Component } from '@angular/core';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })
-export class ProjectsComponent  {
+export class ProjectsComponent implements OnInit {
 
+  projectForm: FormGroup;
 
-  constructor() { }
+  constructor(private fb: FormBuilder) {
 
+  }
 
+  ngOnInit() {
+    this.projectForm = this.fb.group({
+      projectId: ['', [Validators.required, Validators.minLength(5)]],
+      description: ['My cool project', [Validators.required,
+      Validators.maxLength(140)]],
+    })
+  }
+
+  hasFormErrors() {
+    return !this.projectForm.valid;
+  }
+
+  onSubmit() {
+    alert(JSON.stringify(this.projectForm.value));
+  }
 }
