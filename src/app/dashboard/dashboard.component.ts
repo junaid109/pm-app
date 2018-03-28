@@ -15,7 +15,8 @@ const DEFAULT_COLORS = ['#3366CC', '#DC3912', '#FF9900', '#109618', '#990099',
 })
 export class DashboardComponent implements AfterViewInit {
 
-  @ViewChild("mixedChart") mixedChart: UIChart;
+  @ViewChild('mixedChart') mixedChart: UIChart;
+
 
   hoursByProject = [
     { id: 1, name: 'Castrol AR', hoursSpent: 8 },
@@ -65,7 +66,6 @@ export class DashboardComponent implements AfterViewInit {
   }
 
   hoursByTeamChartData = {
-
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
     datasets: [
       {
@@ -79,11 +79,9 @@ export class DashboardComponent implements AfterViewInit {
         data: [44, 63, 57, 90, 77, 70]
       }
     ]
-
   }
 
   hoursByTeamChartDataMixed = {
-
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
     datasets: [
       {
@@ -99,12 +97,10 @@ export class DashboardComponent implements AfterViewInit {
         data: [44, 63, 57, 90, 77, 70]
       }
     ]
-
   }
 
 
   hoursByHappynessChartData = {
-
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
         datasets: [
           {
@@ -122,7 +118,6 @@ export class DashboardComponent implements AfterViewInit {
             data: [14, 13, 37, 40, 77, 70]
           }
         ]
-
       }
 
 
@@ -147,7 +142,7 @@ export class DashboardComponent implements AfterViewInit {
         dataset.data = dataset.data.map((hours) => hours * (Math.random() * 2));
 
       });
-      this.mixedChart.refresh();
+      // this.mixedChart.refresh();
     });
 
   }

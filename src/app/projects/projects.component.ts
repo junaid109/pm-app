@@ -10,6 +10,18 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ProjectsComponent implements OnInit {
 
   projectForm: FormGroup;
+  minProjectDate = new Date();
+
+  allDevs = [
+    {label: 'Junaid', value: 'J Cool'},
+    {label: 'John', value: 'John Cool'},
+    {label: 'Tom', value: 'T Cool'},
+    {label: 'Chris', value: 'C Cool'},
+    {label: 'Peter', value: 'P Cool'},
+    {label: 'Jake', value: 'Jake Cool'},
+    {label: 'Mark', value: 'Mark Cool'},
+    {label: 'Bill', value: 'B Cool'},
+  ]
 
   constructor(private fb: FormBuilder) {
 
@@ -20,6 +32,10 @@ export class ProjectsComponent implements OnInit {
       projectId: ['', [Validators.required, Validators.minLength(5)]],
       description: ['My cool project', [Validators.required,
       Validators.maxLength(140)]],
+      startDate: [new Date(), Validators.required],
+      projectType: ['B'],
+      selectedDevs: [''],
+      rating: [3]
     })
   }
 
