@@ -1,3 +1,7 @@
-<div class="ui-g">
-
-</div>
+<p-dataTable #dt [value]="allTimesheetData" class="ui-g-12" sortField="startTime" sortOrder="1" emptyMessage="no entries found">
+    <p-column field="user" header="User"></p-column>
+    <p-column field="project" header="Project" [filter]="true"p-columnfilterPlaceHolder="Type a Project" filterMatchMode="contains"></p-column>
+    <p-column field="category" header="Category"></p-column>
+    <p-column field="startTime" header="Start Time" [sortable]="true"></p-column>
+    <p-column field="endTime" header="End Time"></p-column>
+</p-dataTable>

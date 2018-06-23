@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MenuModule, PanelModule, ChartModule, InputTextareaModule, InputMaskModule } from 'primeng/primeng';
+import { MenuModule, PanelModule, ChartModule, InputTextareaModule, InputMaskModule, DataTableModule } from 'primeng/primeng';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -73,7 +73,8 @@ const appRoutes: Routes = [
     ListboxModule,
     SpinnerModule,
     SliderModule,
-    RatingModule
+    RatingModule,
+    DataTableModule
   ],
   providers: [  ],
   bootstrap: [AppComponent]
