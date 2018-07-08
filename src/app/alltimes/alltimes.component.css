@@ -1,0 +1,17 @@
+p-dataTable >>> .ui-dataTable-footer {
+    min-height: 60px;
+}
+
+p-dataTable >>> .ui-dataTable-footer input {
+    margin-left: 0.5em;
+    font-size: larger;
+    padding: 3px;
+}
+
+p-dataTable >>> .ui-dataTable-footer {
+    min-height: 60px;
+}
+
+p-dataTable >>> .selectBoxColumn {
+    width: 43px;
+}
