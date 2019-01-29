@@ -10,7 +10,7 @@ export class AlltimesComponent implements OnInit {
   selectedRows : Array<any>;
 
   recordCount : number;
-  
+
   contextMenu : MenuItem[];
 
   selectedRow : any;
@@ -45,9 +45,9 @@ export class AlltimesComponent implements OnInit {
   }
 
   onDelete(selectedRows: any) {
-    this.allTimesheetData = this.allTimesheetData.filter((row)) => {
-      return !selectedRows.includes(row);
-    });
+    //this.allTimesheetData = this.allTimesheetData.filter(("row") => {
+     // return !selectedRows.includes(row);
+    //});
   }
 
   allTimesheetData = [
